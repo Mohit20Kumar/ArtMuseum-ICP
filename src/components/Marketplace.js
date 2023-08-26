@@ -90,7 +90,7 @@ export default function Marketplace() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className='flex flex-col place-items-center justify-center h-[80vh] w-full'>
+      <div className='flex flex-col place-items-center justify-center min-h-[80vh] w-full'>
         <div className='md:text-xl font-bold text-white'>Top ARTs</div>
         <div className='flex mt-5 justify-between flex-wrap max-w-screen-xl text-center'>
           {data?.map((value, index) => {
