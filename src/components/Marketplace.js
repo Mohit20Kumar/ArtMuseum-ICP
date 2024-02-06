@@ -5,6 +5,8 @@ import axios from "axios";
 import { useState } from "react";
 import { GetIpfsUrlFromPinata } from "../utils";
 
+// "address": "0x8c82C2EaBED9250aB470C1115323b7e6c6846e23",
+
 export default function Marketplace() {
   const sampleData = [
     {
@@ -43,12 +45,17 @@ export default function Marketplace() {
 
   async function getAllNFTs() {
     try {
+      // const add = "0xc100f4d01FD6aA4b4411a2cF485638E6f919f57E";
       const ethers = require("ethers");
       //After adding your Hardhat network to your metamask, this code will get providers and signers
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       //Pull the deployed contract instance
+      // console.log(MarketplaceJSON.contract);
+      // console.log(MarketplaceJSON.abi);
+
       let contract = new ethers.Contract(
+        // MarketplaceJSON.address,
         MarketplaceJSON.address,
         MarketplaceJSON.abi,
         signer
